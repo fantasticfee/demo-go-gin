@@ -35,5 +35,7 @@ blocks:
       jobs:
         - name: build
           commands:
+            - go mod init
+            - go mod tidy
             - go build -v -o go-gin-app
             - artifact push project --force go-gin-app
